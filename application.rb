@@ -12,6 +12,32 @@ class Application < Sinatra::Application
 
   get '/' do
     erb :index
+
+
+    # post '/' do
+    #   @model = Model.new(params[:model])
+    #   if @model.save
+    #     redirect '/models'
+    #   else
+    #     "Sorry, there was an error!"
+    #   end
+    # end
+
+    # post "/" do
+    #   login_sql = <<-SQL
+    #   SELECT * FROM users
+    #   WHERE username = '#{params[:name]}'
+    #   AND password = '#{params[:message]}'
+    #   SQL
+    #
+    #   user = @database_connection.sql(login_sql).first
+    #
+    #   if user
+    #     session[:id] = user.fetch("id")
+    #   end
+    #
+    #   redirect "/"
+
   end
 
   get '/continents' do
